@@ -27,22 +27,14 @@ uv tool install copier --with copier-template-extensions
 
 ### template from this repo
 
-#### remote
-
 ```
 uv run copier copy https://github.com/atloo1/try-copier-uv/ path/to/destination --trust
-```
-
-#### local
-
-```
-uv run copier copy path/to/this/repo path/to/destination --trust
 ```
 
 ### update templated repo
 
 ```
-uv run copier update
+uv run copier update -T --defaults --trust
 ```
 
 ## develop
