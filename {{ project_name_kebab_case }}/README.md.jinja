@@ -15,17 +15,26 @@
 
 {{project_description}}
 
+## prerequisites
+
+- [uv](https://docs.astral.sh/uv/getting-started/installation/)
+
+## use
+
+```
+uv run python -m src.{{ project_name_kebab_case.replace('-', '_') }}.main
+```
+
 ## development
 
 ### 1st time setup
 
-{% if testing %}#### test locally{% if github_actions %} (preemptively pass the corresponding GitHub action){% endif %}
+```
+uv run pre-commit install
+```
+
+{% if testing %}### test locally{% if github_actions %} (preemptively pass the corresponding GitHub action){% endif %}
 
 ```
 uv run pytest
 ```{% endif %}
-
-```
-uv run python -m src.{{ project_name_kebab_case.replace('-', '_') }}.main
-uv run pytest tests/main_test.py
-```

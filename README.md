@@ -1,8 +1,8 @@
 # try-copier-uv
 
 [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/atloo1/try-copier-uv/ci.yaml)](https://github.com/atloo1/try-copier-uv/actions/workflows/ci.yaml?query=branch%3Amain)
-[![Dynamic TOML Badge](https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fatloo1%2Ftry-copier-uv%2Frefs%2Fheads%2Fmain%2Fpyproject.toml&query=%24.tool.poetry.dependencies.python&label=python)](https://github.com/atloo1/try-copier-uv/blob/main/pyproject.toml)
-[![Dynamic TOML Badge](https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fatloo1%2Ftry-copier-uv%2Frefs%2Fheads%2Fmain%2Fpyproject.toml&query=%24.tool.poetry.version&label=version)](https://github.com/atloo1/try-copier-uv/blob/main/pyproject.toml)
+[![Dynamic TOML Badge](https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fatloo1%2Ftry-copier-uv%2Frefs%2Fheads%2Fmain%2Fpyproject.toml&query=%24.project.requires-python&label=python)](https://github.com/atloo1/try-copier-uv/blob/main/pyproject.toml)
+[![Dynamic TOML Badge](https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fatloo1%2Ftry-copier-uv%2Frefs%2Fheads%2Fmain%2Fpyproject.toml&query=%24.project.version&label=version)](https://github.com/atloo1/try-copier-uv/blob/main/pyproject.toml)
 [![GitHub License](https://img.shields.io/github/license/atloo1/try-copier-uv)](https://github.com/atloo1/try-copier-uv/blob/main/LICENSE)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/atloo1/try-copier-uv)
 
