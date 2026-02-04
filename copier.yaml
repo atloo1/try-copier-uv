@@ -6,6 +6,8 @@ _exclude:
   - "/uv.lock"
   - "copier.yaml"
 
+_subdirectory: template
+
 _tasks:
     - command: "git init --initial-branch=main"
       working_directory: "{{ project_name_kebab_case }}/"
