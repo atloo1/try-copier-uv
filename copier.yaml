@@ -10,21 +10,13 @@ _subdirectory: template
 
 _tasks:
     - command: "git init --initial-branch=main"
-      working_directory: "{{ project_name_kebab_case }}/"
     - command: "uv add --dev pre-commit {% if testing %}pytest{% endif %}"
-      working_directory: "{{ project_name_kebab_case }}/"
     - command: "uv pip install -e ."
-      working_directory: "{{ project_name_kebab_case }}/"
     - command: "uv run pre-commit install"
-      working_directory: "{{ project_name_kebab_case }}/"
     - command: "git add ."
-      working_directory: "{{ project_name_kebab_case }}/"
     - command: "uv run pre-commit run -v --all-files || true"
-      working_directory: "{{ project_name_kebab_case }}/"
     - command: "git add ."
-      working_directory: "{{ project_name_kebab_case }}/"
     - command: "git commit -m v{{ project_version }}"
-      working_directory: "{{ project_name_kebab_case }}/"
 
 author_email:
   default: "15357562+atloo1@users.noreply.github.com"
