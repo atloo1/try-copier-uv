@@ -390,8 +390,8 @@ wheels = [
 ]
 
 [[package]]
-name = "test-copier-uv"
-version = "0.1.4"
+name = "try-copier-uv"
+version = "0.1.7"
 source = { virtual = "." }
 dependencies = [
     { name = "copier" },

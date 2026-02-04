@@ -9,14 +9,23 @@ _exclude:
 _subdirectory: template
 
 _tasks:
-    - command: "git init --initial-branch=main"
-    - command: "uv add --dev pre-commit {% if testing %}pytest{% endif %}"
-    - command: "uv pip install -e ."
-    - command: "uv run pre-commit install"
-    - command: "git add ."
-    - command: "uv run pre-commit run -v --all-files || true"
-    - command: "git add ."
-    - command: "git commit -m v{{ project_version }}"
+    # run on 1st copy
+    - >
+      if [ ! -d .git ]; then
+        git init --initial-branch=main
+      fi
+
+    # run on copy or update
+    - "uv add --dev pre-commit {% if testing %}pytest{% endif %}"
+    - "uv pip install -e ."
+    - "uv run pre-commit install"
+    - "git add ."
+    - "uv run pre-commit run -v --all-files || true"
+    - "git add ."
+    - >
+      if ! git diff --cached --quiet; then
+        git commit -m "v{{ project_version }}"
+      fi
 
 author_email:
   default: "15357562+atloo1@users.noreply.github.com"
